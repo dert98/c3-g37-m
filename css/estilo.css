@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+ }
+.fondo-color {
+    background-color: rgb(250, 215, 227);
+}
+
+.menu ul a {
+   
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 0px 130px;
+}
+
+.menu ul {
+    display: flex;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav > ul {
+    font-weight: bold;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+nav {
+    display: flex;
+    padding: 15px;
+    padding-left: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Spartan', sans-serif;
+    
+}
+
+
+
+
+
+
+
+/*menu de categorias*/
+body{
+    min-height: 100vh;
+    background: url();
+    background-size: cover;
+    background-position: center;
+}
+.side-bar{
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow: auto;
+}
+.side-bar.active{
+left: 0;
+}
+.side-bar .menu{
+    width: 100%;
+    margin-top: 120px;
+}
+.side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.side-bar .menu .item a{
+    color: rgb(250, 215, 227);
+    
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 80px;
+}
+.side-bar .menu .item a:hover{
+    background: #ffffff93;
+    transition: 0.3s ease;
+}
+.side-bar .menu .item i{
+    margin-right: 15px;
+
+}
+
+.close-btn{
+    position: absolute;
+    color: rgb(146, 68, 68);
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+.menu-btn{
+    position: absolute;
+    color: tomato;
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+/*Fin del menu de categorias*/
