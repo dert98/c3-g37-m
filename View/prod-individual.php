@@ -6,14 +6,14 @@
                           <?php
                             if (isset($_GET["idp"])) {
                                 $idb = $_GET["idp"];
-                                $servername = "localhost";
-                                $username = "root";
-                                $password = "";
-                                $db = "db_joyeria";
-                                $link = mysqli_connect($servername,$username,$password,$db);
-                                $sql = "SELECT * from productos Where `id_producto` = $idb";
-                                $result = mysqli_query($link,$sql);
-                                $reg = mysqli_fetch_array($result);
+                                include('dbmlController.php');
+                                include('productoController.php');
+                                $dbml = new dbManager("producto","id_producto");
+                                $dbml->select();
+                                $dbml->where('id_producto','=',$idb);
+                                $pro = $dbml->getArray();
+                                var_dump($pro);
+                                echo $pro["color"];
                             }
                             $idp = $_GET["idp"];
                             //    y con esto sabemos que comentarios, valoracion y mail se mandaron.
@@ -112,7 +112,7 @@
                               </thead>
                               <tbody>
                                   <tr>
-                                      <th scope='row'><?php echo  $pro->color?></th>
+                                      <th scope='row'><?php echo  $pro['color']?></th>
                                       <td><?php echo  $pro->materialidad ?></td>
                                       <td><?php echo  $pro->piedra ?></td>
                                   </tr>

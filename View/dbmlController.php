@@ -20,7 +20,7 @@ class dbManager {
 *                               Public methods                                 *
 *******************************************************************************/
     function __construct($table,$primaryKey){
-        $config = file_get_contents("config/config.json");
+        $config = file_get_contents("../config/config.json");
         $config = json_decode($config, true);
         $this->table = $table;
         $this->primaryKey = $primaryKey;
