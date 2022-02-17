@@ -2,7 +2,7 @@
           <main>
               <section>
                   <div class='row  product'>
-                      <div class='col-8 col-md-4 col-lg-6'>
+                      <div class='col-8 col-md-4 col-lg-6 text-center'>
                           <?php
                             if (isset($_GET["idp"])) {
                                 $idb = $_GET["idp"];
@@ -11,9 +11,8 @@
                                 $dbml = new dbManager("producto","id_producto");
                                 $dbml->select();
                                 $dbml->where('id_producto','=',$idb);
-                                $pro = $dbml->getArray();
-                                var_dump($pro);
-                                echo $pro["color"];
+                                $prod = $dbml->getArray();
+                                $pro = new obj($prod[0]); // ver bien en q posicion devuelve los datos requeridos
                             }
                             $idp = $_GET["idp"];
                             //    y con esto sabemos que comentarios, valoracion y mail se mandaron.
@@ -91,8 +90,12 @@
 
 
                             ?>
-
-                          <img src='<?php echo  $pr_im ?>' class='card-img-top rounded' alt='...'>
+                            <?php
+                            $nomimg1 = "id-".$pro->id_producto;
+                            $nomimg2 = "_c-".$pro->categoria_id;
+                            $nomimg = $nomimg1.$nomimg2;
+                            ?>
+                          <img src= <?php echo "../Assets/img/$nomimg.jpg"?> class='card-img-top rounded' alt='...' style="width: 200px; height: 200px;">
                       </div>
 
                       <div class='col-8 col-md-4 col-lg-6'>
@@ -112,7 +115,7 @@
                               </thead>
                               <tbody>
                                   <tr>
-                                      <th scope='row'><?php echo  $pro['color']?></th>
+                                      <th scope='row'><?php echo  $pro->color?></th>
                                       <td><?php echo  $pro->materialidad ?></td>
                                       <td><?php echo  $pro->piedra ?></td>
                                   </tr>
