@@ -39,7 +39,7 @@
                         foreach ($categorias as $categoria) {
                             $cat = new obj($categoria);
                             echo '<li class="nav-item">
-                            <a class="nav-link" href="@">'.$cat->nombre.'</a>
+                            <a class="nav-link" href="index.php?idcat='.$cat->id_categoria.'&categoria='.$cat->nombre.'">'.$cat->nombre.'</a>
                         </li>';
                         }
                    ?>

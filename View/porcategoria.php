@@ -7,20 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        // include('View/navbar.php');
-    ?>
     <div class="container">
         <div class="text-center">
             <?php
-            echo '<h2>Categoria '.$_GET["categoria"].'</h2>';
-            echo '<h2>Id de Categoria '.$_GET["idcat"].'</h2>';
+            echo '<h2>Categoria '.ucfirst($_GET["categoria"]).'</h2>';
             ?>
         </div>
         <div>
         <?php
-            include('dbmlController.php');
-            include('productoController.php');
             $dbml = new dbManager("producto","id_producto");
             $dbml->select();
             $idb = $_GET["idcat"];
@@ -35,7 +29,7 @@
                 echo '<div class="card col-md-3">
                     <h5 class="card-header"></h5>
                     <div class="card-body">
-                        <img src="../Assets/img/'.$nomimg.'.jpg" style="width: 200px; height: 200px;" >
+                        <img src="./Assets/img/'.$nomimg.'.jpg" style="width: 200px; height: 200px;" >
                         <h5 class="card-title">Colores: '.$pro->nombre.'</h5>
                         <p class="card-text">Materiales:'.$pro->materialidad.' </p>
                         <p class="card-text">Colores:'.$pro->color.' </p>
