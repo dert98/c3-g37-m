@@ -25,7 +25,7 @@
                 echo '<div class="card col-md-3">
                     <h5 class="card-header"></h5>
                     <div class="card-body">
-                        <img src="Assets/img/'.$nomimg.'.jpg" style="width: 200px; height: 200px;" >
+                        <img src="Assets/img/'.$nomimg.'.jpg" style="width: 300px; height: 300px;" >
                         <h5 class="card-title">Colores: '.$pro->nombre.'</h5>
                         <p class="card-text">Materiales:'.$pro->materialidad.' </p>
                         <p class="card-text">Colores:'.$pro->color.' </p>

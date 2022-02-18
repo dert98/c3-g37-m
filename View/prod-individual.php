@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php
         include ('head.php');
-        include ('navbar.php');
+        include ('navbar_m.php');
+        
     ?>
     <title>Document</title>
 </head> 

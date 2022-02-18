@@ -5,11 +5,10 @@ require('View/head.php');
 ?>
 <body>
 	<?php
-		require('View/head.php');
+		include('Controller/dbmlController.php');
+		include('Controller/productoController.php');
 		require('View/navbar.php');
 		require('View/slider.php');
-		require('View/menu.php');
-		require('View/quienes_somos.php');
 		require('View/footer.php');
 	?>
 </body>
