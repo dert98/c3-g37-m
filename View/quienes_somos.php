@@ -1,10 +1,9 @@
 <?php
 require('head.php');
 require_once('navbar_m.php');
-
 ?>
 <main>
-        <section id="quienesomos" class=" text-left">
+        <section id="quienesomos" class="text-left">
            <div class="row">
                <div class="col-7 col-md-9 col-lg-12">
             <h2 class="mb-3 text-left ">Quienes somos</h2>

@@ -14,24 +14,25 @@
     <body>
           <main>
               <section>
-                  <div class='row  product bg2 h400'>
-                      <div class='col-8 col-md-4 col-lg-6 text-center mt-2'>
-                          <?php
-                            if (isset($_GET["idp"])) {
-                                $idb = $_GET["idp"];
-                                include('dbmlController.php');
-                                include('productoController.php');
-                                $dbml = new dbManager("producto", "id_producto");
-                                $dbml->select();
-                                $dbml->where('id_producto', '=', $idb);
-                                $prod = $dbml->getArray();
-                                $pro = new obj($prod[0]); // ver bien en q posicion devuelve los datos requeridos
-                            }
-                            $nomimg1 = "id-" . $pro->id_producto;
-                            $nomimg2 = "_c-" . $pro->categoria_id;
-                            $nomimg = $nomimg1 . $nomimg2;
-                            ?>
-                          <img src=<?php echo "../Assets/img/$nomimg.jpg" ?> class='card-img-top rounded' alt='...' style="width: 200px; height: 200px;">
+                <?php
+                  if (isset($_GET["idp"])) {
+                      $idb = $_GET["idp"];
+                      include('dbmlController.php');
+                      include('productoController.php');
+                      $dbml = new dbManager("producto", "id_producto");
+                      $dbml->select();
+                      $dbml->where('id_producto', '=', $idb);
+                      $prod = $dbml->getArray();
+                      $pro = new obj($prod[0]); // ver bien en q posicion devuelve los datos requeridos
+                  }
+                  $nomimg1 = "id-" . $pro->id_producto;
+                  $nomimg2 = "_c-" . $pro->categoria_id;
+                  $nomimg = $nomimg1 . $nomimg2;
+                  ?>
+                  <div class='row h400 m-2 p-2 b4'>
+                      <div class='col-8 col-md-4 col-lg-6 text-center'>
+                          <img src=<?php echo "../Assets/img/$nomimg.jpg" ?> 
+                          class="mt-3" style="width: 300px; height: 300px;">
                       </div>
 
                       <div class='col-8 col-md-4 col-lg-6'>
@@ -53,13 +54,26 @@
                               </tbody>
                           </table>
 
-
-                          <p class='precio'>Precio del producto: <?php echo  $pro->precio ?></p>
+                          <p class='precio text-end'>Precio del producto: <?php echo  $pro->precio ?></p>
+                          <p>
+                            <label>Cantidad de productos</label>
+                            <select name="select">
+                              <option value="1" selected>1</option>
+                              <?php
+                                for ($i=2; $i < 10 ; $i++) { 
+                                  echo '<option value="'.$i.'">'.$i.'</option>';
+                                }
+                              ?>
+                            </select>
+                          </p>
                           <?php
-                            if ($pro->precio < 100) {
+                            if ($pro->precio%2==0) {
                                 echo '<label for="" class="text-danger">Oferta</label>';
                             }
                           ?>
+                          <p class="text-end">                            
+                            <a href="View/prod-individual.php?idp='.$pro->id_producto.'" class="btn btn-primary">Comprar</a>
+                          </p>
               </section>
           </main>
           <?php

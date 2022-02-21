@@ -16,11 +16,11 @@
   <div class="text-center mt-3">
     <label for="" class="h1 bb3">Iniciar Sesión</label>
   </div>
-  <section id="login" class="f2 cp1">
+  <section id="login" class="">
     <div class="container col-md-12 text-center m-auto mt-5">
-      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto img-thumbnail">
-        <form _ngcontent-c0="" novalidate="" class="p-2 m-2 bg1" action="../auth/validar.php" method="POST">
-          <img src="../img/m.png" alt="" class="cp1 w200 h200 b1 rounded-circle">
+      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto b2 border-circule">
+        <form _ngcontent-c0="" novalidate="" class="p-2 m-2" action="../auth/validar.php" method="POST">
+          <img src="../Assets/img/id-3_c-1.jpg" alt="" class="w200 h200 cp5">
           <div _ngcontent-c0="" class="inputGroup inputGroup1 m-3">
             <label _ngcontent-c0="" for="usuario" class="h3">Usuario</label>
             <input _ngcontent-c0="" class="usuario ng-untouched ng-pristine ng-invalid" id="usuario" maxlength="256"
