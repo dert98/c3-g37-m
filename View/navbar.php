@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light fondo-color menu ">
+<nav class="navbar navbar-expand-md navbar-light fondo-color menu">
     <div class="container">
         <a class="navbar-brand" href="index.php"><img src="Assets/img/img_menu/logodelmenu.png" alt="Ziba" width="80px" height="60px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

@@ -2,27 +2,19 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://dert98.github.io/Porfolio/global.css">
-</head>
-
-<body style="background-color: rgb(250, 215, 227);">
+<?php
+  require_once("head.php");
+?>
+<body class="fondo-color">
   <?php
-    include('../View/navbar_m.php');
+  require_once("navbar_m.php");
   ?>
-  <p class="bb3"></p>
-  <div class="text-center mt-3">
+  <div class="text-center">
     <label for="" class="h1 bb3">Iniciar Sesión</label>
   </div>
   <section id="login" class="">
     <div class="container col-md-12 text-center m-auto">
-      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto">
+      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto b2 border-circule">
         <form _ngcontent-c0="" novalidate="" class="p-2 m-2" action="../auth/validar.php" method="POST">
           <img src="../Assets/img/id-3_c-1.jpg" alt="" class="w200 h200 cp5">
           <div _ngcontent-c0="" class="inputGroup inputGroup1 m-3">
@@ -37,8 +29,8 @@
               required="" type="password">
           </div>
           <div _ngcontent-c0="" class="">
-            <button class="btn btn-success">Ingresar</button>
-            <a href="../" class="btn btn-success">Regresar</a>
+            <button class="btn btn-success">Log in</button>
+            <a href="../index.php" class="btn btn-success">Regresar</a>
           </div>
         </form>
       </div>

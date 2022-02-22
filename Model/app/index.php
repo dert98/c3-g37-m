@@ -15,11 +15,7 @@
 </head>
 <body>
     <?php
-    if(isset($_SESSION["usuario"])){
-        header("Location: ../../");
-    }else{
-        include ('producto-index.php');
-    }   
+    include ('producto-index.php');
     ?>
 <fieldset>
 </fieldset>

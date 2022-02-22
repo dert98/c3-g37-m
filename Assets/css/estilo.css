@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    overflow-x: hidden;
+ }
+.fondo-color {
+    background-color: rgb(250, 215, 227);
+}
+
+.menu ul a {
+   
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 0px 130px;
+}
+
+.menu ul {
+    display: flex;
+}
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+}
+nav > ul {
+    font-weight: bold;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+}
+nav {
+    display: flex;
+    padding: 15px;
+    padding-left: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+h1,
+h2,
+h3 {
+    font-family: 'Spartan', sans-serif;
+    
+}
+
+
+
+
+
+
+
+/*menu de categorias*/
+body{
+    min-height: 100vh;
+    background: url();
+    background-size: cover;
+    background-position: center;
+}
+.side-bar{
+    background:  rgba(255, 165, 196, 0.192);
+    backdrop-filter: blur(15px);
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow: auto;
+    z-index: 1;
+}
+.carrousele a span{
+    z-index: 3;
+}
+.side-bar.active{
+left: 0;
+}
+.side-bar .menu{
+    width: 100%;
+    margin-top: 120px;
+}
+.side-bar .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.side-bar .menu .item a{
+    color: rgb(44, 44, 44);
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 120px;
+}
+.side-bar .menu .item a:hover{
+    width: 100%;
+    background: rgba(250, 215, 227, 0.562);
+    transition: 0.3s ease;
+}
+.side-bar .menu .item i{
+    margin-right: 15px;
+
+}
+
+.close-btn{
+    position: absolute;
+    color: rgb(146, 68, 68);
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    margin-top: 108px;
+    cursor: pointer;
+}
+.menu-btn{
+    position: absolute;
+    color:  rgb(250, 215, 227);
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+}
+/*Fin del menu de categorias*/
+
+/*quienes somos*/
+section {
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+main {
+    width: 1024px;
+    margin: auto;
+}
+
+
+
+/*contacto*/
+#contacto {
+    text-align: center; 
+}
+#contacto h1{
+    margin-bottom: 80px;
+}
+
+.mapa iframe{
+    height: 500px;
+    width: 100%;
+}
+
+.botonenviar {
+    background-color: rgb(245, 92, 151);
+    border:solid 1px rgb(245, 92, 151) ;
+    color:white;
+}
+
+.botonenviar:hover {
+    background-color:white;
+    border: solid 1px rgb(245, 92, 151);
+    color: rgb(245, 92, 151);
+}
+
+
+
+
+
+
+
+
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+ #wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+
+/*Redes*/
+.redes,
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.redes,
+.menu ul {
+    display: flex;
+}
+
+.redes {
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+
+
+
+.redes a {
+    color: rgb(245, 92, 151);
+    font-size: 50px;
+    text-decoration: none;
+    padding: 5px 20px;
+    
+}
+
+.redes a:hover {
+    background-color: rgba(237, 172, 197, 0.77);
+    color: white;
+    border-radius: 8px;
+}
+
+.redes a:active {
+    border: 3px solid rgba(237, 172, 197, 0.77);
+    color: rgba(237, 172, 197, 0.77);
+    background-color: white;
+}
+
+/*Footer*/
+.footer2{
+    color: black;
+    background-color: rgb(250, 215, 227);
+}
+
+.trabajo{
+    text-decoration: none;
+    color: burlywood;
+}
+
+
+/*productos*/
+.prod{
+   text-align: center;
+}
+.card_p{
+    margin: 25px;
+    margin-right: 75px;
+    text-align: center;
+
+}
+.product > p, .precio {
+    color: palevioletred;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.fondo-colorm{
+    background-color: rgb(119, 0, 255);
+    color: rgb(25, 5, 71);
+}
+
+
+.cuadro{
+    background-color: rgba(250, 215, 227, 0.322);
+    color: palevioletred;
+    padding-right: 70px;
+    padding-top: 30px;
+    width: 1100px;
+    height: 400px;
+    margin: 100px;
+}
+
+
+.trabaja p a{
+    color: bisque;
+    background-color: brown;
+}

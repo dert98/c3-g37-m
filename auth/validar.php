@@ -1,15 +1,13 @@
 <?php
 var_dump($_POST);
-  if (isset($_POST["usuario"]) && isset($_POST["password"])){
     $u = $_POST["usuario"];
     $p = $_POST["password"];
     if (($u == 'admin') && ($p =='123456')){
       session_start();
       $_SESSION["usuario"]=$u;
       header("Location: ../Model/app/index.php");
-    }
-  }else{
-    header("Location: login.php");
+    }else{
+    header("Location: ../");
   }  
   // include("../dbml.php");
   // $dbml = new dbManager("usuarios","id");
