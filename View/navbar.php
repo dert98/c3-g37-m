@@ -35,6 +35,9 @@
                    <?php
                         $cate = new dbManager("categoria","id_categoria");
                         $cate->select();
+                        if (isset($_GET['id_categoria'])) {
+                            # code...
+                        }
                         $categorias = $cate->getArray();
                         foreach ($categorias as $categoria) {
                             $cat = new obj($categoria);
