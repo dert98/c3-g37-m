@@ -12,13 +12,17 @@
   <link rel="stylesheet" href="https://dert98.github.io/Porfolio/global.css">
 </head>
 
-<body>
+<body style="background-color: rgb(250, 215, 227);">
+  <?php
+    include('../View/navbar_m.php');
+  ?>
+  <p class="bb3"></p>
   <div class="text-center mt-3">
     <label for="" class="h1 bb3">Iniciar Sesión</label>
   </div>
   <section id="login" class="">
-    <div class="container col-md-12 text-center m-auto mt-5">
-      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto b2 border-circule">
+    <div class="container col-md-12 text-center m-auto">
+      <div class="col-md-6 col-lg-6 col-xs-6 text-center m-auto">
         <form _ngcontent-c0="" novalidate="" class="p-2 m-2" action="../auth/validar.php" method="POST">
           <img src="../Assets/img/id-3_c-1.jpg" alt="" class="w200 h200 cp5">
           <div _ngcontent-c0="" class="inputGroup inputGroup1 m-3">
@@ -34,7 +38,7 @@
           </div>
           <div _ngcontent-c0="" class="">
             <button class="btn btn-success">Log in</button>
-            <a href="" class="btn btn-success">Regresar</a>
+            <a href="../" class="btn btn-success">Regresar</a>
           </div>
         </form>
       </div>

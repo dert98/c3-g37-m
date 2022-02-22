@@ -23,11 +23,11 @@
         <div>
         <?php
             $dbml = new dbManager("producto","id_producto");
+            $dbml->select();
             if (isset($_GET["idcat"])) {
                 $idb = $_GET["idcat"];
                 $dbml->where('categoria_id','=',$idb);
             }
-            $dbml->select();
             $regs = $dbml->getArray();
                 echo '<div class="container row">';
                 foreach ($regs as $reg) {

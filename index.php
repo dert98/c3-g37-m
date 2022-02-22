@@ -8,6 +8,7 @@ require('View/head.php');
 		include('Controller/dbmlController.php');
 		include('Controller/productoController.php');
 		require('View/navbar.php');
+		require('View/slider.php');
 		require('View/porcategoria.php');
 		require('View/footer.php');
 	?>
