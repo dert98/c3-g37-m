@@ -37,7 +37,7 @@
               required="" type="password">
           </div>
           <div _ngcontent-c0="" class="">
-            <button class="btn btn-success">Log in</button>
+            <button class="btn btn-success">Ingresar</button>
             <a href="../" class="btn btn-success">Regresar</a>
           </div>
         </form>
