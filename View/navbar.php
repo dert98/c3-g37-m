@@ -25,6 +25,9 @@
                       echo '<li class="nav-item">
                               <a class="nav-link" href="view/login.php">Login</a>
                           </li>';
+                      echo '<li class="nav-item">
+                              <a class="nav-link" href="view/registrarse.php">Registrarse</a>
+                          </li>';
                     }
                 ?>
             </ul>

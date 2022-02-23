@@ -6,11 +6,8 @@
   require_once("head.php");
 ?>
 <body class="fondo-color">
-  <?php
-  require_once("navbar_m.php");
-  ?>
   <div class="text-center">
-    <label for="" class="h1 bb3">Iniciar Sesión</label>
+    <label for="" class="h1 bb3 mt-3">Iniciar Sesión</label>
   </div>
   <section id="login" class="">
     <div class="container col-md-12 text-center m-auto">
@@ -23,14 +20,14 @@
               name="usuario" required="" type="text">
             <span _ngcontent-c0="" class="indicator"></span>
           </div>
-          <div _ngcontent-c0="" class="inputGroup inputGroup2 m-3">
+          <div _ngcontent-c0="" class="inputGroup inputGroup2 mt-2">
             <label _ngcontent-c0="" for="password" class="h3">Password</label>
             <input _ngcontent-c0="" class="password ng-untouched ng-pristine ng-invalid" id="password" name="password"
               required="" type="password">
           </div>
-          <div _ngcontent-c0="" class="">
+          <div _ngcontent-c0="" class="mt-4">
             <button class="btn btn-success">Log in</button>
-            <a href="/" class="btn btn-success">Regresar</a>
+            <a href="../" class="btn btn-success">Regresar</a>
           </div>
         </form>
       </div>
