@@ -39,16 +39,18 @@
                         <h5 class="card-header"></h5>
                         <div class="card-body m-1 p-1">
                         <a href="View/prod-individual.php?idp='.$pro->id_producto.'"> <img src="./Assets/img/'.$nomimg.'.jpg" style="width: 280px; height: 200px;" class="hr3 hr1"></a>
-                            <h5 class="card-title">'.$pro->nombre.'</h5>
+                            <h3 class="card-title">'.$pro->nombre.'</h3>
                             <p class="card-text">Materiales:'.$pro->materialidad.' </p>
                             <p class="card-text">Colores:'.$pro->color.' </p>
-                            <a href="View/prod-individual.php?idp='.$pro->id_producto.'" class="btn btn-primary">Comprar</a><label> '.$pro->precio.'</label> 
+                            <p class="h5 t3"><label>Precio: '.$pro->precio.'</label> </p>
+                            <a href="View/prod-individual.php?idp='.$pro->id_producto.'" class="btn btn-primary">Comprar</a>
                         </div>
                     </div>';
                 }
                 echo '</div>';
         ?>
         </div>
+        
     </div>
 </body>
 </html>

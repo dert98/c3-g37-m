@@ -26,7 +26,7 @@
                         <h2 class="float-left">Tabla    Producto Details</h2>
                         <a href="producto-create.php" class="btn btn-success float-right">Add New Record</a>
                         <a href="producto-index.php" class="btn btn-info float-right mr-2">Reset View</a>
-                        <a href="../../auth/salir.php" class="btn btn-secondary float-right mr-2">Salir</a>
+                        <a href="../../" class="btn btn-secondary float-right mr-2">Salir</a>
                     </div>
 
                     <div class="form-row">
