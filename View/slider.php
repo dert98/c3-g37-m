@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
 <div class="text-center m-auto mt-4">
     <div id="carouselId" class="carousel slide mt-5" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -41,3 +44,5 @@
         </a>
     </div>
 </div>
+</body>
+</html>

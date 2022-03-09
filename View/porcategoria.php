@@ -20,7 +20,7 @@
             $dbml->where('categoria_id', '=', $idb);
         }
         $regs = $dbml->getArray();
-        echo '<div class="row m-3 p-3 bg3">';
+        echo '<div class="container row">';
 
         foreach ($regs as $reg) {
             $pro = new obj($reg);

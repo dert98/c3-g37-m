@@ -7,17 +7,12 @@ include('navbar_m.php');
 
 <body>
   <div class="container">
-    <div class="row col-md12 mt-4 p-4">
+    <div class="row col-md12 mt-4 p-4 h400">
       <div class=" col-md-6 text-center">
-      <img src="../Assets/img/id-1_c-1.jpg" alt="" srcset="" class="" style="width: 400px;height: 300px;">
-      <p>
-        <span>
-          El gusto de cada uno es el mejor placer que pueden mirarnos con sus ojos.
-        </span>
-      </p>
+      <img src="../Assets/img/img_menu/fabrica.jpg" class="radius" srcset="" class="" style="width: 400px;height: 300px;">
     </div>
     <div class="col-md-6">
-      <div class="text-center b5 p-5">
+      <div class="text-center b5 p-5 radius">
         <form _ngcontent-c0="" novalidate="" sclass="text-center" action="../Controller/validar.php" method="POST">
           <div _ngcontent-c0="" class="inputGroup inputGroup1">
             <label _ngcontent-c0="" for="usuario" class="h3">Usuario</label>
