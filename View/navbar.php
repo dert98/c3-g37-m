@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-light fondo-color menu">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="index.php"><img src="Assets/img/img_menu/logodelmenu.png" alt="Ziba" width="80px" height="60px"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item active">
                     <a class="nav-link" href="index.php">Productos<span class="sr-only"></span></a>
                 </li>
@@ -16,69 +16,74 @@
                     <a class="nav-link" href="View/contacto.php">Contacto</a>
                 </li>
                 <?php
-                    session_start();
-                    if (isset($_SESSION["usuario"])){
-                      echo '<li class="nav-item">
-                              <a class="nav-link" href="Controller/salir.php">'.ucfirst($_SESSION["usuario"]).' Salir</a>
+                session_start();
+                if (isset($_SESSION["usuario"])) {
+                    echo '<li class="nav-item">
+                              <a class="nav-link" href="Controller/salir.php">' . ucfirst($_SESSION["usuario"]) . ' Salir</a>
                           </li>';
-                    }else{
-                      echo '<li class="nav-item">
+                } else {
+                    echo '<p><li class="nav-item">
                               <a class="nav-link" href="view/login.php">Login</a>
-                          </li>';
-                      echo '<li class="nav-item">
-                              <a class="nav-link" href="view/registrarse.php">Registrarse</a>
-                          </li>';
-                    }
+                              <a class="nav-link" href="Model/app/usuario-create.php">Registrarse</a>
+                            </li>
+                            </p>';
+                }
+                $carrito = json_decode(file_get_contents('Config/pcarrito.json'), true);
+                    $cantPro= count($carrito);
+                    echo '<a href="view/mostrarcarrito.php">Cant Productos: '.$cantPro.'</a>';
                 ?>
             </ul>
         </div>
     </div>
 
 
-    </nav>
+</nav>
 <div class="menu-btn">
-<i class="fa fas-bars"><ion-icon name="chevron-forward-outline"></ion-icon></i>
+    <i class="fa fas-bars">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+    </i>
 </div>
 <div class="side-bar">
     <div class="close-btn">
-        <i class="fas fa-times"><ion-icon name="close-outline"></ion-icon></i>
+        <i class="fas fa-times">
+            <ion-icon name="close-outline"></ion-icon>
+        </i>
     </div>
     <div class="menu">
-        <div class="item"> 
+        <div class="item">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  
-                   <?php
-                        $cate = new dbManager("categoria","id_categoria");
-                        $cate->select();
-                        if (isset($_GET['id_categoria'])) {
-                            # code...
-                        }
-                        $categorias = $cate->getArray();
-                        foreach ($categorias as $categoria) {
-                            $cat = new obj($categoria);
-                            echo '<li class="nav-item">
-                            <a class="nav-link" href="index.php?idcat='.$cat->id_categoria.'&categoria='.$cat->nombre.'">'.$cat->nombre.'</a>
+
+                <?php
+                $cate = new dbManager("categoria", "id_categoria");
+                $cate->select();
+                if (isset($_GET['id_categoria'])) {
+                    # code...
+                }
+                $categorias = $cate->getArray();
+                foreach ($categorias as $categoria) {
+                    $cat = new obj($categoria);
+                    echo '<li class="nav-item">
+                            <a class="nav-link" href="index.php?idcat=' . $cat->id_categoria . '&categoria=' . $cat->nombre . '">' . $cat->nombre . '</a>
                         </li>';
-                        }
-                   ?>
-               </ul>
-            </div>
-        
+                }
+                ?>
+            </ul>
+        </div>
+
     </div>
 </div>
 
 <!--jquery for expand and collapse the sidebar-->
 <script type="text/javascript">
+    $('.menu-btn').click(function() {
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+    });
 
-$('.menu-btn').click(function(){
-    $('.side-bar').addClass('active');
-    $('.menu-btn').css("visibility", "hidden");
-});
-
-$('.close-btn').click(function(){
-    $('.side-bar').removeClass('active');
-    $('.menu-btn').css("visibility", "visible");
-});
+    $('.close-btn').click(function() {
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+    });
 </script>
 
 

@@ -7,7 +7,7 @@
         </ol>
         <div class="carousel-inner h300" role="listbox" style="background-color: rgb(250, 215, 227);">
             <div class="carousel-item active">
-                <img src="./Assets/img/id-1_c-1.jpg" class="cp1" 
+                <img src="./Assets/img/id-1_c-1.jpg" 
                     alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h3 class="">Collares</h3>
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./Assets/img/id-2_c-1.jpg" class="cp5" 
+                <img src="./Assets/img/id-2_c-1.jpg" 
                     alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Title</h3>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="./Assets/img/id-3_c-1.jpg" class="" 
+                <img src="./Assets/img/id-3_c-1.jpg" 
                     alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Title</h3>
